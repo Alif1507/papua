@@ -1,0 +1,517 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 3000px;
+  overflow-x: hidden;
+}
+
+.navigator {
+  display: flex;
+  height: 55px;
+  flex: 2 1 2;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 0.3s ease-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 11;
+}
+
+.latar-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 55px;
+}
+
+.navigator:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.2);
+
+}
+
+.kiri {
+  width: 30%;
+
+}
+
+.kiri img {
+  left: 6px ;
+  position: fixed;
+  z-index: -2;
+  top: 2px;
+  width:50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+
+
+
+.tengah {
+  width: 40%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 18px ;
+
+}
+
+.kanan {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 16px;
+  text-align: center;
+  justify-content: center;
+  gap: 2rem;
+  font-family: Poppins;
+  white-space: nowrap;
+  font-size: 13px;
+  color: white; 
+}
+
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 250px;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start ;
+}
+
+.sidebar a {
+  width: 100%;
+  margin-top: 2rem;
+  text-shadow: 0 0 0.5px orange;
+  color: orange;
+}
+
+.sidebar svg {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.link:hover {
+  text-shadow: 0 0 0.5px orange;
+  color: orange;
+}
+
+.ampat,
+.ampat2 {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  z-index: 9;
+  top: 0;
+}
+
+.Slide {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+} 
+
+.ampat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10; 
+}
+
+.ra {
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  top: 87%;
+  color: white;
+  font-family: Lora;
+  z-index: 11;
+  font-size: 20px;
+}
+
+.gambar {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.slogan {
+ position: relative;
+ top: 200px;
+ z-index: 1;
+}
+
+#papua {
+  position: absolute;
+  top: 50px;
+  left: 25%;
+  translate: -50% -50%;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 110px;
+  z-index: 1;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 4px 0 #000, 4px 4px 0 #000;
+} 
+
+.tembok {
+  background-color: white;
+  position: absolute;
+  z-index: 8;
+  width: 100%;
+  height: 74%;
+}
+
+.image-galery {
+  position: relative;
+  margin-top: 0%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 14%;
+  z-index: -2;
+  
+}
+
+.pulau {
+ display: flex;
+ flex-direction: row;
+ margin-top: 590px;
+ justify-content: flex-end;
+ margin-right: 80px;
+}
+
+
+.image-galery::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99.6%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: -1;
+}
+
+.image {
+  width: 100%;
+  height: 90%;
+  z-index: -2;
+  object-fit: cover;
+}
+
+.pejelasan {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+  margin-left: 16px;
+  margin-right: 20px;
+}
+
+.hayati,.alam,.seni {
+border: solid 5px orange;
+ text-align: center;
+ font-family: Poppins;
+ font-size: 24px ;
+ color: #000;
+ border-radius: 16px;
+ width: 1000px;
+ height: 520px;
+ transition: 0.3s;
+ background-color:white;
+ z-index: 2;
+ position: relative;
+}
+
+.hayati::after,.alam::after,.seni::after {
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  border-radius: 16px;
+}
+
+
+.hayati h2 {
+  text-shadow: 0 0 3px lightcoral ;
+  color: lightcoral;
+  font-size: 32px;
+}
+
+
+.hayati:hover,.alam:hover,.seni:hover {
+  background-color: rgb(255, 165, 0);
+  border: none;
+  box-shadow: 0 4px 100px rgba(255, 165, 0, 0.5);
+  color: white;
+  transform: translateY(-30px);
+}
+
+.pa1 {
+  position: absolute;
+  left: -30px;
+  z-index: -2;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.pa2 {
+  position: absolute;
+  left: -30px;
+  z-index: -2;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.pa3 {
+  position: absolute;
+  left: -30px;
+  z-index: -2;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.alam:hover .pa3 {
+  transform: translateY(-200px);
+  opacity: 1;
+}
+
+.seni:hover .pa2 {
+  transform: translateY(-200px);
+  opacity: 1;
+}
+
+.hayati:hover .pa1 {
+  transform: translateY(-200px);
+  opacity: 1;
+}
+
+.peta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jayawi {
+  padding: 10px;
+  object-fit: contain;
+}
+
+.jaya {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 5rem;
+
+}
+
+.social a {
+  background-color: var(--text-color);
+  padding: 1em;
+  border-radius: 50%;
+  box-shadow: 0px 0px 2px var(--text-color);
+}
+
+.social a::before {
+  content: attr(data-social);
+  position: absolute;
+  background-color: var(--accent-color);
+  color: var(--base-color);
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  box-shadow: 0 5px 10px rgba(0, 0 , 0, 0.05);
+  transform: translateY(-30px) rotate(25deg);
+  opacity: 0;
+  transition: 200ms ease;
+}
+
+.social a:hover:before {
+  transform: translateY(-65px) rotate(0);
+  opacity: 1;
+}
+
+.social a:hover{
+  background-color: var(--accent-color);
+  fill: var(--base-color);
+}
+
+.social a svg:hover {
+  fill: var(--base-color);
+}
+
+.social a::after {
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid var(--accent-color);
+  transform: translateY(0) rotate(25deg);
+  opacity: 0;
+}
+
+.social a:hover::after {
+  transform: translateY(-62px) rotate(0);
+  opacity: 1;
+  display: none;
+}
+
+svg {
+  display: block;
+  height: 32px;
+}
+
+
+
+
+
+
+.hayati button {
+  display: none;
+}
+
+.seni button {
+  display: none;
+}
+
+.alam button {
+  display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .kanan {
+    display: none;
+  }
+
+  .kiri svg {
+    display: block;
+  }
+  
+  .tengah, .kiri {
+    width: 50%;
+  }
+
+  .tengah {
+    font-size: 12px;
+  }
+  
+  .image-galery {
+    margin-top: 2000px;
+  }
+
+  .pejelasan {
+    gap: 1px ;
+    margin-top: -500px;
+  } 
+
+  .hayati-seni {
+    flex-direction: column;
+    gap: 1px ;
+  }
+
+  .alam,.hayati,.seni {
+    height: 20%;
+    font-size: 13px;
+    gap: 1px;
+    border: none;
+  }
+
+  .alam {
+    margin-top: 0px;
+    margin-bottom: 1rem;
+  }
+
+  .alam button {
+    position: absolute;
+    top: 72% ;
+    left: 50%;
+    translate: -50% -50%;
+    width: 70px;
+    border: none;
+    border-radius: 20%; 
+    background-color: orange;
+    z-index: 5;
+    display: block;
+  }
+
+  .seni {
+    margin-top: 130px;
+  }
+
+  .seni button {
+    position: absolute;
+    top: 47.5% ;
+    left: 50%;
+    translate: -50% -50%;
+    width: 70px;
+    border: none;
+    border-radius: 20%; 
+    background-color: orange;
+    z-index: 5;
+    display: block;
+  } 
+  
+
+  .hayati button {
+    position: absolute;
+    top: 10% ;
+    left: 50%;
+    translate: -50% -50%;
+    width: 70px;
+    border: none;
+    border-radius: 20%; 
+    background-color: orange;
+    z-index: 5;
+    display: block;
+  } 
+
+  button {
+    display: none;
+  }
+}
