@@ -1,6 +1,6 @@
 window.onscroll = function () {
   let movingDiv = document.getElementById ("papua")
-  let stopPosition = 1050;
+  let stopPosition = 1190;
   let scrollPosition = window.scrollY;
 
   if (scrollPosition < stopPosition) {
@@ -36,6 +36,7 @@ function closeSideBar() {
   sideBar.style.display = "none";
   
 }
+
 
 
 

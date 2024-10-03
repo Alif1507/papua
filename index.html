@@ -18,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="img/LOGO.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   </head>
 <body>
@@ -56,13 +57,18 @@
   background-color: orange;
   z-index: 12;"></button>
   <div class="ampat">
+    <div class="pp">
+      <div class="marquee-container">
+        <div class="marquee"> <span>Pesona Papua <span class="strip">-</span></span><span>Pesona Papua <span class="strip">-</span></span><span>Pesona Papua <span class="strip">-</span></span><span>Pesona Papua <span class="strip">-</span></span><span>Pesona Papua <span class="strip">-</span></span><span>Pesona Papua <span class="strip">-</span></span></div>
+      </div>
+    </div>    
     <div class="ampat2 Slide fade"><img class="gambar" src="img/pexels-greenwish-_-137929759-10482395.jpg" alt=""></div>
     <div class="ampat2 Slide fade"><img class="gambar" src="img/pexels-ayahditra-18619490.jpg" alt=""></div>
     <div class="ampat2 Slide fade"><img class="gambar" src="img/pexels-ayahditra-18619494.jpg" alt=""></div>
     <div class="ampat2 Slide fade"><img class="gambar" src="img/pexels-stijn-dijkstra-1306815-2583852.jpg" alt=""></div>
     <button style="
     position: absolute;
-   top: 85% ;
+   top: 94% ;
    left: 50%;
    translate: -50% -50%;
    width: 70px;
@@ -78,8 +84,7 @@
   </div>
   <div class="tembok"></div>
 
-  <div class="pulau" style="">
-    <div class="kosong"></div>
+  <div class="pulau">
     <div class="papua-island"><img src="img/Copy of PAPUA.svg" alt=""></div>
   </div>
   <div style="background-image: url(img/papua/back.gif);" class="image-galery">
@@ -113,17 +118,50 @@
 
 </div>
 <div class="social">
-  <img src="img/wijaya.jpg" alt="">
-  <div class="bawah"><h1 id="papua">JELAJAH PAPUA <br> BERTUALANG</h1></div>
+    <!-- Slider main container -->
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="img/1.svg" alt=""></div>
+    <div class="swiper-slide"><img src="img/2.svg" alt=""></div>
+    <div class="swiper-slide"><img src="img/3.svg" alt=""></div>
+    <div class="swiper-slide"><img src="img/4.svg" alt=""></div>
+    <div class="swiper-slide"><img src="img/5.svg" alt=""></div>
+    <div class="swiper-slide"><img src="img/6.svg" alt=""></div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <div class="pagination_">
+    <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"><img src="img/arrow_back_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt=""></div>
+  <div class="swiper-button-next"><img src="img/arrow_forward_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt=""></div>
+  </div> 
 </div>
 </div>
      
 
 
 
-  
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+   const swiper = new Swiper('.swiper', {
+  speed: 400,
+  spaceBetween: 10,
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable:true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+</script>
 
-  
 </body>
 <script src="script.js"></script>
 </html>
