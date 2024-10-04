@@ -10,6 +10,48 @@ body {
   box-sizing: border-box;
 }
 
+.animasi-bawah {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-100%);
+  transition: all 1s;
+ }
+
+ 
+ .animasi-atas {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100%);
+  transition: all 1s;
+ }
+ 
+ .animasi-kanan1 {
+   opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 1s; 
+ }
+
+ .animasi-kiri {
+  opacity: 0;
+ filter: blur(5px);
+ transform: translateX(-100%);
+ transition: all 1s; 
+}
+
+ 
+ .show {
+   opacity: 1;
+   filter: blur(0);
+   transform: translateX(0);
+ }
+ 
+ @media(prefers-reduce-motion) {
+   .animasi{
+     transition: none;
+   }
+ }
+
 
 
 .navigator {
@@ -287,6 +329,7 @@ body {
 .pejelasan {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 3rem;
   justify-content: center;
   align-items: center;
@@ -626,6 +669,10 @@ border: solid 5px #3f2009;
 
   .kanan {
     display: none;
+  }
+
+  html {
+    overflow-x: hidden;
   }
 
   .kiri svg {

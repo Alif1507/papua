@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Pesona Papua</title>
+  <link rel="stylesheet" href="style-kebudayaan.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
@@ -14,11 +14,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="img/LOGO.svg">
 </head>
 <body>
   <nav class="navigator">
-    <div class="kiri"></div>
+    <div class="kiri">
+      <div onclick="showSideBar()">
+        <img src="img/LOGO.svg" alt="">
+      </div>
+    </div>
     <div class="tengah"><h1>Temukan Pesona Papua.</h1></div>
+    <div class="kanan sidebar">
+      <div onclick="closeSideBar()"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></div>
+      <a class="link" href="index.html">Beranda</a>
+      <a class="link" href="Kearifan-lokal.html">Kearifan Lokal</a>
+      <a class="link"href="Tempat-wisata.html">Tempat Wisata</a>
+      <a class="link"href="Budaya.html">Budaya</a>
+      <a class="link"href="umkm.html">UMKM</a>      
+  </div>
     <div class="kanan">
       <a class="link" href="index.html">Beranda</a>
       <a class="link" href="Kearifan-lokal.html">Kearifan Lokal</a>
@@ -34,6 +47,111 @@
   width: 50px;
   border: none;
   border-radius: 20%; 
-  background-color: orange;"></button>
+  background-color: orange;
+  z-index: 9;"></button>
+
+<div class="ampat">
+  <div class="ampat2 Slide fade"><img class="gambar" src="img/Kebudayaan/1.jpg" alt=""></div>
+      <div class="ampat2 Slide fade"><img class="gambar" src="img/Kebudayaan/2.jpg" alt=""></div>
+      <div class="ampat2 Slide fade"><img class="gambar" src="img/Kebudayaan/3.jpg" alt=""></div>
+      <div class="ampat2 Slide fade"><img class="gambar" src="img/Kebudayaan/4.jpg" alt=""></div>
+</div>
+
+<div class="musik">
+  <div class="piring "><img class="" src="img/Kebudayaan/b9263c3e-3b64-4cf4-a5a3-45d1273c4c9d.jpg" alt=""></div>
+  <div class="btn-musik"><button onclick="mutar(); apuse()">PUTAR</button></div>
+  <div class="apuse"></div>
+</div>
+
+<div class="wrapper">
+  <div class="itemLeft item1" style="background-image: url(img/Kebudayaan/sliding/1.webp); background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+  <div class="itemLeft item2" style="background-image: url(img/Kebudayaan/sliding/2.webp); background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+  <div class="itemLeft item3" style="background-image: url(img/Kebudayaan/sliding/3.webp); background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+  <div class="itemLeft item4" style="background-image: url(img/Kebudayaan/sliding/4.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+  <div class="itemLeft item5" style="background-image: url(img/Kebudayaan/sliding/5.jpg);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+  <div class="itemLeft item6" style="background-image: url(img/Kebudayaan/sliding/6.jpg);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+  <div class="itemLeft item7" style="background-image: url(img/Kebudayaan/sliding/7.jpeg);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+  <div class="itemLeft item8" style="background-image: url(img/Kebudayaan/sliding/8.jpg);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+</div>
+
+<div class="wrapper"></div>
+  <div class="itemRight item1" style="background-image: url(img/Kebudayaan/sliding/9.jpeg);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+  <div class="itemRight item2" style="background-image: url(img/Kebudayaan/sliding/10.jpg);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+  <div class="itemRight item3" style="background-image: url(img/Kebudayaan/sliding/11.jpg);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+  <div class="itemRight item4" style="background-image: url(img/Kebudayaan/sliding/12.webp);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+  <div class="itemRight item5" style="background-image: url(img/Kebudayaan/sliding/13.jpg);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+  <div class="itemRight item6" style="background-image: url(img/Kebudayaan/sliding/14.webp);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+  <div class="itemRight item7" style="background-image: url(img/Kebudayaan/sliding/15.webp);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+  <div class="itemRight item8" style="background-image: url(img/Kebudayaan/sliding/16.webp);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+</div>
+
+<div style="background: rgb(63,32,9);
+background: linear-gradient(180deg, rgba(63,32,9,0) 0%, rgba(63,32,9,0.7008053221288515) 35%, rgb(63,32,9,1) 100%); height: 500px; width: 100%;">.</div>
+
+
+<div class="back">
+  <div class="penjelasan">
+      <div class="satu">
+        <div class="gambar1 animasi"><img src="img/Kebudayaan/gambar1jpeg.jpeg" alt=""></div>
+        <div class="parag1 animasi-kanan">
+          <h1>SUKU</h1>
+          <p>Kebudayaan Papua mencerminkan kekayaan tradisi dan keragaman etnis di wilayah paling timur Indonesia. Papua terdiri dari ratusan suku dengan bahasa, adat, dan kepercayaan yang berbeda-beda, seperti suku Dani, Asmat, dan Korowai. Setiap suku memiliki ciri khas masing-masing, seperti tarian tradisional, seni ukir, pakaian adat, dan cara hidup yang terikat erat dengan alam.</p>
+        </div>
+    </div>
+    <div class="dua">
+      <div class="parag2 animasi">
+        <h1>TRADISI</h1>
+        <p>Seni ukir kayu, terutama dari suku Asmat, sangat terkenal di dunia, dengan motif-motif yang merepresentasikan roh leluhur dan cerita rakyat. Rumah adat suku Dani, yang disebut honai, juga mencerminkan cara hidup mereka yang unik. Tarian seperti tarian perang dan upacara adat menjadi bagian penting dari kehidupan sosial dan spiritual mereka.</p>
+  </div>
+      <div class="gambar2 animasi-kanan"><img src="img/Kebudayaan/wpid-img_8405.webp" alt=""></div>
+</div>
+<div class="tiga">
+  <div class="gambar3 animasi-kanan"><img src="img/Kebudayaan/festival.jpg" alt=""></div>
+  <div class="parag3 animasi">
+    <h1>FESTIVAL</h1>
+    <p>Papua juga dikenal dengan festival budaya, seperti Festival Lembah Baliem, yang merayakan tradisi dan kehidupan suku-suku di sana. Meskipun banyak suku yang masih mempertahankan tradisi mereka, pengaruh modernisasi juga mulai merambah ke kehidupan sehari-hari di Papua.</p>
+</div>
+</div>
+
+
+
+
+<div class="bawah">
+  <div class="pakaian-adat">
+    <div class="adat">
+      <h1>PAKAIAN ADAT</h1>
+      <div class="baju-adat">
+        <div class="baju animasi-kiri">
+          <img src="img/Kebudayaan/shutterstock_421378861.webp" alt="">
+          <h2 style="margin-top: -20px;">Kain Rumput</h2>
+        </div>
+        <div class="baju animasi-bawah">
+          <img src="img/Kebudayaan/kotekajpg.jpg" alt="">
+          <h2 style="margin-top: -20px;">Koteka</h2>
+        </div>
+        <div class="baju animasi-kanan1">
+          <img src="img/Kebudayaan/pakaian-sali.jpg" alt="">
+          <h2 style="margin-top: -20px;">Sali</h2>
+        </div>
+        <div class="baju animasi-kiri">
+           <img src="img/Kebudayaan/Baju-karungan.png" alt="">
+           <h2 style="margin-top: -20px;">Baju Karungan</h2>
+          </div>
+        <div class="baju animasi-atas">
+          <img src="img/Kebudayaan/rok-rumbai.jpg" alt="">
+          <h2>Rok Rumbai</h2>
+        </div>
+        <div class="baju animasi-kanan1">
+           <img src="img/Kebudayaan/Yokal.webp" alt="">
+           <h2 style="margin-top: -22px;">Yokal</h2>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+  <div>.</div>
+  
+      <script src="script.js"></script>
 </body>
 </html>

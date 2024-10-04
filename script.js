@@ -38,6 +38,60 @@ function closeSideBar() {
 }
 
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show')
+      }
+  });
+});
+const hiddenElementkanan = document.querySelectorAll('.animasi-kanan')
+const hiddenElement = document.querySelectorAll('.animasi')
+const hiddenElementAtas = document.querySelectorAll('.animasi-atas')
+const hiddenElementBawah = document.querySelectorAll('.animasi-bawah')
+const hiddenElementKiri = document.querySelectorAll('.animasi-kiri')
+const hiddenElementKanan1 = document.querySelectorAll('.animasi-kanan1')
+
+hiddenElementkanan.forEach((el) => observer.observe(el));
+hiddenElement.forEach((el) => observer.observe(el));
+hiddenElementAtas.forEach((el) => observer.observe(el));
+hiddenElementBawah.forEach((el) => observer.observe(el));
+hiddenElementKiri.forEach((el) => observer.observe(el));
+hiddenElementKanan1.forEach((el) => observer.observe(el));
+
+function mutar() {
+  let piring = document.querySelector('.piring')
+  if (piring.classList.contains('muter')) {
+    piring.classList.remove('muter')
+  } else {piring.classList.add('muter')}
+}
+
+function apuse() {
+
+    const apuseContainer = document.querySelector('.apuse');
+    
+    if (apuseContainer.innerHTML.trim() !== "") {
+      apuseContainer.innerHTML = "";
+    } else {
+      const html = `
+        <audio autoplay>
+          <source src="Assets/APUSE - Lagu daerah Papua (Indonesia) Lirik lagu Apuse.mp3" type="audio/mpeg">
+          APUSE
+        </audio>`;
+        
+      apuseContainer.innerHTML = html;
+    }
+  }
+  
+  
+  
+
+
+
+
+
+
 
 
 
