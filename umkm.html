@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Pesona Papua</title>
+  <link rel="stylesheet" href="css/style-umkm.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
@@ -14,11 +14,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="img/LOGO.svg">
 </head>
 <body>
   <nav class="navigator">
-    <div class="kiri"></div>
-    <div class="tengah"><h1>Temukan Pesona Papua.</h1></div>
+    <div class="kiri">
+      <div onclick="showSideBar()">
+      <img src="img/LOGO.svg" alt="">
+    </div></div>
+    <div class="tengah"><h1>Temukan Pesona Papua</h1></div>
+    <div class="kanan sidebar">
+      <div onclick="closeSideBar()"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></div>
+      <a class="link" href="index.html">Beranda</a>
+      <a class="link" href="Kearifan-lokal.html">Kearifan Lokal</a>
+      <a class="link"href="Tempat-wisata.html">Tempat Wisata</a>
+      <a class="link"href="Budaya.html">Budaya</a>
+      <a class="link"href="umkm.html">UMKM</a>      
+  </div>
     <div class="kanan">
       <a class="link" href="index.html">Beranda</a>
       <a class="link" href="Kearifan-lokal.html">Kearifan Lokal</a>
@@ -27,13 +39,61 @@
       <a class="link"href="umkm.html">UMKM</a>     
     </div>
     </nav>
-    <button style="
-   position: absolute;
-  top: 40px ;
-  left: 1462px;
-  width: 50px;
-  border: none;
-  border-radius: 20%; 
-  background-color: orange;"></button>
+
+
+<div class="ampat">
+  <div class="ampat2 Slide fade"><img class="gambar" src="img/umkm/1.jpg" alt=""></div>
+      <div class="ampat2 Slide fade"><img class="gambar" src="img/umkm/2.jpg" alt=""></div>
+      <div class="ampat2 Slide fade"><img class="gambar" src="img/umkm/3.jpeg" alt=""></div>
+      <div class="ampat2 Slide fade"><img class="gambar" src="img/umkm/4.webp" alt=""></div>
+</div>
+
+<div class="header">
+  <div class="header-kiri scroll">
+    <h1 class="dropdown">UMKM</h1>
+    <p>UMKM (Usaha Mikro, Kecil, dan Menengah) memiliki peran penting dalam pembangunan ekonomi Papua. Meskipun begitu, UMKM di Papua menghadapi beberapa tantangan unik yang berbeda dibandingkan dengan daerah lain di Indonesia</p>
+  </div>
+  <div class="header-kanan scroll"><img src="img/umkm/header.jpg" alt=""></div>
+</div>
+
+<div class="penjelasan">
+  <div class="banyak">
+  <div class="kerajinan scroll">
+    <div class="pa1"><img src="img/umkm/penjelasan/gal_61595de7dcc371-09493321-46461041.jpg" alt=""></div>
+    <h1>Kerajinan</h1>
+    <p>Papua dikenal dengan kerajinan unik seperti anyaman, noken (tas khas Papua), dan ukiran kayu. Produk-produk ini memiliki nilai budaya yang tinggi dan banyak diminati oleh wisatawan serta kolektor, baik lokal maupun internasional. Kerajinan tersebut mencerminkan kekayaan budaya Papua dan potensi ekonomi yang besar.</p>
+  </div>
+  <div class="pertanian scroll">
+    <div class="pa2"><img src="img/umkm/penjelasan/962686_07141604092017_petani.jpg" alt=""></div>
+    <h1>Pertanian</h1>
+    <p>Pertanian di Papua menghasilkan komoditas penting seperti kopi, sagu, dan kakao. Kopi Papua, terutama dari Wamena, dikenal karena kualitasnya yang tinggi dan telah menembus pasar internasional. Sagu, sebagai makanan pokok masyarakat Papua, juga memiliki potensi untuk dikembangkan menjadi produk olahan bernilai tambah.</p>
+  </div>
+  <div class="perikanan scroll">
+    <div class="pa3"><img src="img/umkm/penjelasan/Sentra-Perikanan.jpg" alt=""></div>
+    <h1>Perikanan</h1>
+    <p>Papua memiliki garis pantai yang kaya akan hasil laut, termasuk ikan tuna, kerapu, lobster, dan kerang mutiara. Produk perikanan ini sangat diminati, terutama di pasar ekspor, dan berpotensi besar untuk meningkatkan kesejahteraan masyarakat pesisir melalui usaha pengolahan hasil laut.</p>
+  </div>
+  </div>
+  <div class="parawisata scroll">
+    <div class="dropdown">
+      <h1>Pariwisata Berbasis Budaya</h1>
+      <div class="wrapper">
+        <div class="itemLeft item1" style="background-image: url(img/umkm/penjelasan/sliding/1.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+        <div class="itemLeft item2" style="background-image: url(img/umkm/penjelasan/sliding/2.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+        <div class="itemLeft item3" style="background-image: url(img/umkm/penjelasan/sliding/3.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+        <div class="itemLeft item4" style="background-image: url(img/umkm/penjelasan/sliding/4.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+        <div class="itemLeft item5" style="background-image: url(img/umkm/penjelasan/sliding/5.webp);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+        <div class="itemLeft item6" style="background-image: url(img/umkm/penjelasan/sliding/6.webp);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+        <div class="itemLeft item7" style="background-image: url(img/umkm/penjelasan/sliding/7.jpg);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+        <div class="itemLeft item8" style="background-image: url(img/umkm/penjelasan/sliding/8.jpg);background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+      </div>
+    </div>
+    <p>Ekowisata dan pariwisata berbasis budaya menjadi daya tarik utama di Papua. Festival seperti Festival Lembah Baliem dan Festival Danau Sentani menjadi ajang wisata budaya yang melibatkan banyak UMKM lokal. Mereka menyediakan layanan penginapan, pemandu wisata, serta suvenir berbasis budaya yang mendukung sektor pariwisata.</p>
+  </div>
+</div>
+
+<div class="bawahbet">.</div>
+
+<script src="script.js"></script>
 </body>
 </html>

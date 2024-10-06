@@ -577,6 +577,10 @@ transition: 0.2s;
     flex-direction: column;
   }
 
+  .back {
+    height: 150%;
+  }
+
   .parag1 h1 {
     font-size: 50px;
   }
