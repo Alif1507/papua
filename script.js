@@ -1,3 +1,17 @@
+
+window.addEventListener('load', function() {
+ 
+  setTimeout(function() {
+      
+      document.getElementById('loading').style.opacity = '0';
+      document.getElementById('loading').style.visibility = 'hidden';
+
+  }, 5000); 
+});
+
+
+
+
 window.onscroll = function () {
   let movingDiv = document.getElementById ("papua")
   let stopPosition = 1190;
@@ -89,6 +103,8 @@ const dropdown = document.querySelector('.dropdown');
 dropdown.addEventListener('click', () => {
   dropdown.classList.toggle('active');
 });
+
+
   
   
 
