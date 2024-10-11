@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #EDE8DC;
+}
+
+@keyframes daribawah {
+    from {
+      transform: translateY(200px);
+    }
+  
+    to {
+      transform: translateY(0px);
+    }
+    
+   }
+  
+  
+  
+   .dari-bawah {
+    animation: daribawah linear;
+    animation-timeline:  view();
+    animation-range: entry 0% cover 40%;
+    padding-top: 100px;
+   }
+  
+  
+  
+
+/* Layer Utama */
+
+.layer-utama {
+    border: 2px;
+    margin-left: 3rem;
+    margin-right: 3rem; 
+    margin-top: 3rem;
+    border-radius: 20px;
+    background-color: #FCFAEE;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    border: none;
+    height: 310vh;
+   
+}
+
+/* Judul */
+.awalan {
+    font-size: 40px;
+    padding: 30px 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px #A67B5B;
+    position: relative;
+    background: linear-gradient(to right, #A67B5B 20%, #A67B5B 20%, transparent 20%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: background-size 1s linear;
+    background-size: 0 100%;
+    background-position: 0 0;
+    display: inline-block;
+}
+
+.awalan::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #A67B5B;
+    transition: 1s linear;
+}
+
+.awalan:hover::after {
+    width: 100%;
+}
+
+.awalan:hover {
+    background-size: 500% 500%;
+    filter: drop-shadow(0 0 10px #A67B5B);
+} 
+
+.awalan::before { 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+/*Layer Pertama */
+
+.layer-pertama {
+    display: flex;
+}
+
+/* Kartu */
+.card {
+    width: 770px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 7rem 7rem;
+    border: 3.5px solid #3f2009;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-body {
+    width: 92%;
+    height: 85%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+    opacity: 0;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.card-subtitle {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 15px ;
+    font-weight: 400;
+    text-align: center;
+}
+
+.card-btn {
+    color: #000000;
+    background:#F5F5F5;
+    padding: 10px 22px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.card:hover .card-body {
+    right: 0;
+    opacity: 1;
+}
+
+/* Kanan */
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70rem;
+    font-size: 10;
+}
+
+.right-judul {
+    display: flex;
+    flex-direction: row;
+    font-size: 70px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.accordion {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 15px;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.accordion-content {
+    background-color: #E9EFEC;
+    border-radius: 10px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.accordion-content.open {
+    padding-bottom: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.1s ease;
+}
+
+.accordion-content header {
+    display: flex;
+    margin-top: 10px;
+    min-height: 40px;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.accordion-content header:hover {
+    color: #ECB176;
+    transition: 2s;
+}
+
+.accordion-content header:hover i {
+    color: #ECB176;
+    transition: 1s;
+}
+
+.accordion-content.open header {
+    min-height: 35px;
+}
+
+
+.accordion-content header .title {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+.accordion-content header i {
+    font-size: 15px;
+    color: #333;
+}
+
+.accordion-content .description  {
+    height: 0;
+    padding: 0 10px;
+    padding-top: 16px;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 0.2s linear;
+}
+
+/* SIstem Sosial Suku */
+.judul-suku {
+  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(1, 1, 3, 0.5);
+  margin-top: 8rem;
+}
+
+.layer-kedua {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.kotak1 {
+  background-color: #ECB176;
+  width: 600px;
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  margin: 3rem 4rem;
+  transition: transform 0.3s ease;
+  display: flex;
+  margin-top: 5rem;
+}
+
+.kotak1 img {
+  width: 180px;
+  height: 180px;
+}
+
+.icon {
+  border: 10px solid white;
+  border-radius: 15px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+  max-height: 87%;
+}
+
+.judul-kotak1 {
+  margin: 0;
+  font-size: 1.5em;
+  font-family:  "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.content p {
+  margin: 5px 0 0 0;
+  font-size: 0.9em;
+  font-family:  "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.kotak1:hover .icon {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* layer ketiga */
+.layer-ketiga {
+  position: relative;
+  display: flex;
+  justify-content:center ;
+  align-items: center;  
+  gap: 90px;
+  margin-top: 10rem ;
+  margin-left: 3rem;
+ 
+}
+
+.gambar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 350px;
+  max-width: 100%;
+  height: 300px;
+  background-color: white;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+
+
+.img-box {
+  position: absolute;
+  top: 20px;
+  width: 300px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.layer-ketiga .gambar:hover {
+  height: 400px;
+}
+
+.layer-ketiga .gambar:hover .img-box {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.layer-ketiga .gambar .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.layer-ketiga .gambar .isi {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.layer-ketiga .gambar:hover .isi {
+    top: 130px;
+    height: 250px;
+}
+
+.isi h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #009688;
+}
+
+.isi p {
+    color: #333;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #3f2009;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 4rem;
+    font-size: 30px;
+    font-family: Poppins;
+    font-weight: bold;
+    margin-top: 800px;
+  }
+  
+  .list li a {
+    text-decoration: none;
+    color: #D8D8D8;
+    margin-top: 4rem;
+    transition: 0.3s ease;
+  }
+  
+  .list li a:hover {
+    color: orange;
+    text-shadow: 0px 0px 1px orange;
+  }
+  
+  .list li {
+    margin-top: 3rem;
+  }
+  
+  .list {
+    list-style-type: none;
+  }
+  
+  .media {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+  }
+  
+  .media svg {
+    height: 50px;
+    width: 50px;
+    fill: #D8D8D8;
+    transition: 0.2s ease;
+  }
+  
+  .media svg:first-child:hover {
+   fill: #000000;
+   cursor: pointer;
+  }
+  
+  
+  .media svg:nth-child(2):hover {
+    fill: #FF0000;
+    cursor: pointer;
+  }
+  
+  .media svg:last-child:hover {
+    fill: #E4405F;
+    cursor: pointer;
+  }
+
+
+
+
+
