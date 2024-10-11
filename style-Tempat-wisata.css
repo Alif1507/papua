@@ -6,6 +6,26 @@ body {
   scroll-behavior: smooth;
 }
 
+@keyframes daribawah {
+  from {
+    transform: translateY(200px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+  
+ }
+
+
+
+ .dari-bawah {
+  animation: daribawah linear;
+  animation-timeline:  view();
+  animation-range: entry 0% cover 40%;
+ }
+
+
 .animasi {
   opacity: 0;
   filter: blur(5px);
@@ -1224,4 +1244,72 @@ body {
   color: #ffffff;
   font-family: "Poppins", serif;
   margin-left: 40px;
+}
+
+footer {
+  background-color: #3f2009;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 4rem;
+  font-size: 30px;
+  font-family: Poppins;
+  font-weight: bold;
+  margin-top: 500px;
+}
+
+.list li a {
+  text-decoration: none;
+  color: #D8D8D8;
+  margin-top: 4rem;
+  transition: 0.3s ease;
+}
+
+.list li a:hover {
+  color: orange;
+  text-shadow: 0px 0px 1px orange;
+}
+
+.list li {
+  margin-top: 3rem;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.media {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.media svg {
+  height: 50px;
+  width: 50px;
+  fill: #D8D8D8;
+  transition: 0.2s ease;
+}
+
+.media svg:first-child:hover {
+ fill: #000000;
+ cursor: pointer;
+}
+
+
+.media svg:nth-child(2):hover {
+  fill: #FF0000;
+  cursor: pointer;
+}
+
+.media svg:last-child:hover {
+  fill: #E4405F;
+  cursor: pointer;
 }

@@ -3,7 +3,6 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -29,6 +28,289 @@ body {
     animation-range: entry 0% cover 40%;
     padding-top: 100px;
    }
+
+
+   .animasi {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(25%);
+    transition: all 1s;
+   }
+  
+   
+   .animasi-kanan {
+     opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-25%);
+    transition: all 1s; 
+   }
+  
+   .animasi-bawah {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-100%);
+    transition: all 1s;
+   }
+  
+   
+   .animasi-atas {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 1s;
+   }
+   
+   .animasi-kanan1 {
+     opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s; 
+   }
+  
+   .animasi-kiri {
+    opacity: 0;
+   filter: blur(5px);
+   transform: translateX(-100%);
+   transition: all 1s; 
+  }
+  
+   
+   .show {
+     opacity: 1;
+     filter: blur(0);
+     transform: translateX(0);
+   }
+   
+   @media(prefers-reduce-motion) {
+     .animasi{
+       transition: none;
+     }
+   }
+  
+   @keyframes muncul {
+    from {
+      opacity: 0;
+      scale: 0.5;
+      
+    }
+  
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+   }
+  
+   .scroll {
+    animation: muncul linear;
+    animation-timeline:  view();
+    animation-range: entry 0% cover 40%;
+   }
+  
+  
+  
+   @keyframes dariKiri {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    
+   }
+  
+   @keyframes dariKanan {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    
+   }
+  
+  
+   .dari-kiri {
+    animation: dariKiri linear;
+    animation-timeline:  view();
+    animation-range: entry 0% cover 40%;
+    padding-top: 100px;
+   }
+  
+   .dari-kanan {
+    animation: dariKanan linear;
+    animation-timeline:  view();
+    animation-range: entry 0% cover 40%;
+    padding-top: 100px;
+   }
+  
+  
+  
+  
+  
+  .navigator {
+    display: flex;
+    height: 55px;
+    flex: 2 1 2;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 0.3s ease-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 11;
+  }
+  
+  .latar-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 55px;
+  }
+  
+  .navigator:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.2);
+  
+  }
+  
+  .kiri {
+    width: 30%;
+  
+  }
+  
+  .kiri img {
+    left: 6px ;
+    position: fixed;
+    z-index: -2;
+    top: 2px;
+    width:50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .kanan, .kiri, .tengah {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  
+  
+  .tengah {
+    width: 40%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 18px ;
+  
+  }
+  
+  .kanan {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 16px;
+    text-align: center;
+    justify-content: center;
+    gap: 2rem;
+    font-family: Poppins;
+    white-space: nowrap;
+    font-size: 13px;
+    color: white; 
+  }
+  
+  .sidebar {
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start ;
+  }
+  
+  .sidebar a {
+    width: 100%;
+    margin-top: 2rem;
+    text-shadow: 0 0 0.5px orange;
+    color: orange;
+  }
+  
+  .sidebar svg {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+  
+  .link {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+  
+  .link:hover {
+    text-shadow: 0 0 0.5px orange;
+    color: orange;
+  }
+  
+  .ampat,
+  .ampat2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 8;
+    top: 0;
+  }
+
+  .gambar1 {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  
+  .Slide {
+    display: none;
+  }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  } 
+  
+  .ampat::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999; 
+  }
+  
+  
   
   
   
@@ -39,12 +321,12 @@ body {
     border: 2px;
     margin-left: 3rem;
     margin-right: 3rem; 
-    margin-top: 3rem;
+    margin-top: 100vh;
     border-radius: 20px;
     background-color: #FCFAEE;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
     border: none;
-    height: 310vh;
+    height: 600vh;
    
 }
 
@@ -473,6 +755,11 @@ footer {
     cursor: pointer;
   }
 
+  @media only screen and (max-width: 768px) {
+    .awalan {
+        font-size: 15rem;
+    }
+  }
 
 
 
