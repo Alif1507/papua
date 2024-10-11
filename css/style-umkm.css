@@ -811,6 +811,11 @@ footer {
   cursor: pointer;
 }
 
+.kiri-dikit1 {
+  transform: translateY(-100px);
+  margin-left: -100px;
+}
+
 @media only screen and (max-width: 768px) {
   
   .kanan {
@@ -838,6 +843,8 @@ footer {
     margin-top: 800px;
     margin-left: 0;
     margin-right: 0;
+    justify-content: center;
+    align-items: center;
   }
 
 
@@ -870,7 +877,40 @@ footer {
     height: 300px;
   }
 
+  .banyak {
+   flex-direction: column;
+    gap: 5rem;
+  }
 
+  .kerajinan,.perikanan,.pertanian {
+    width: 320px;
+  }
+
+  .pertanian {
+    font-size: 15px;
+  }
+
+  .tantangan {
+    margin-top: 500px;
+  }
+
+
+  footer {
+    margin-top: 500px;
+  }
+
+
+  .dari-kanan {
+    animation: none;
+  }
+
+  .dari-kiri {
+    animation: none;
+  }
+
+  .list {
+    margin-bottom: 200px;
+  }
 }
 
 
