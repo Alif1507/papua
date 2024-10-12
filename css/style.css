@@ -126,7 +126,7 @@ body {
   font-family: "Playfair Display", serif;
   font-weight: bold;
   font-size: 18px ;
-
+  margin-right: 6rem;
 }
 
 .kanan {
@@ -141,6 +141,7 @@ body {
   white-space: nowrap;
   font-size: 13px;
   color: white; 
+  margin-right: 6rem;
 }
 
 .sidebar {
@@ -682,6 +683,11 @@ border: solid 5px #3f2009;
 
   .kanan {
     display: none;
+  }
+
+  .ampat {
+    overflow-y: hidden;
+    position: absolute;
   }
 
   html {

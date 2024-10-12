@@ -190,7 +190,7 @@
   font-family: "Playfair Display", serif;
   font-weight: bold;
   font-size: 18px ;
-
+  margin-right: 6rem;
 }
 
 .kanan {
@@ -205,6 +205,7 @@
   white-space: nowrap;
   font-size: 13px;
   color: white; 
+  margin-right: 6rem;
 }
 
 .sidebar {
@@ -338,7 +339,18 @@
 
 
 
-.wrapper {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+
+.wrapper,.wrapper1 {
   margin-top: 2rem;
   width: 90%;
   max-width: 1536px;
@@ -355,6 +367,10 @@
   );
 }
 
+.wrapper1 {
+  margin-top: 5rem;
+}
+
 @keyframes scrollLeft {
   to {
     left: -200px;
@@ -366,7 +382,6 @@
     right: -200px;
   }
 }
-
 
 .itemLeft,
 .itemRight {
@@ -421,7 +436,6 @@
 .item8 {
   animation-delay: calc(30s / 8 * (8 - 8) * -1);
 }
-
 .back {
   background-color: #3f2009;
   height: 100%;

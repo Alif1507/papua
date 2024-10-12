@@ -6,6 +6,7 @@ body {
 
 
 
+
 * {
   box-sizing: border-box;
 }
@@ -160,7 +161,6 @@ body {
 .navigator {
   display: flex;
   height: 55px;
-  flex: 2 1 2;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -216,7 +216,7 @@ body {
   font-family: "Playfair Display", serif;
   font-weight: bold;
   font-size: 18px ;
-
+  margin-right: 6rem;
 }
 
 .kanan {
@@ -231,8 +231,8 @@ body {
   white-space: nowrap;
   font-size: 13px;
   color: white; 
+  margin-right: 6rem;
 }
-
 .sidebar {
   position: fixed;
   height: 100vh;
@@ -406,7 +406,9 @@ body {
  align-items: center;
  justify-content: center;
  position: relative;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .kerajinan p,.perikanan p,.pertanian p {
   transition: 0.3s;
@@ -486,10 +488,16 @@ body {
 .perikanan:hover, .kerajinan:hover,.pertanian:hover {
   background-color: #3f2009; 
   border: 5px solid rgba(255, 165, 0, 0);
-  box-shadow: 0 4px 100px #3f2009; 
+  box-shadow: 0 4px 100px rgba(63, 32, 9, 1);
   color: white;
   transform: translateY(-30px);
 }
+
+.perikanan::after,.kerajinan::after,.pertanian::after {
+  content: '';
+
+}
+
 
 .kerajinan:hover p, .pertanian:hover p,.perikanan:hover p {
   transform: translateY(-90px);
@@ -822,9 +830,6 @@ footer {
     display: none;
   }
 
-  html {
-    overflow-x: hidden;
-  }
 
   .kiri svg {
     display: block;
@@ -892,11 +897,12 @@ footer {
 
   .tantangan {
     margin-top: 500px;
+    gap: 500px;
   }
 
 
   footer {
-    margin-top: 500px;
+    margin-top: 600px;
   }
 
 
