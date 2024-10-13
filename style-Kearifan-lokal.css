@@ -6,36 +6,163 @@
 }
 
 body {
-    background-color: #EDE8DC;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+body {
+-ms-overflow-style: none; 
+scrollbar-width: none; 
+}
+
+
+
 @keyframes daribawah {
-    from {
-      transform: translateY(200px);
-    }
+  from {
+    transform: translateY(200px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
   
-    to {
-      transform: translateY(0px);
-    }
-    
-   }
-  
-  
-  
-   .dari-bawah {
-    animation: daribawah linear;
-    animation-timeline:  view();
-    animation-range: entry 0% cover 40%;
-    padding-top: 100px;
-   }
+ }
 
 
-   .animasi {
+
+ .dari-bawah {
+  animation: daribawah linear;
+  animation-timeline:  view();
+  animation-range: entry 0% cover 40%;
+  padding-top: 100px;
+ }
+
+
+
+
+.animasi {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(25%);
+  transition: all 1s;
+ }
+
+ 
+ .animasi-kanan {
+   opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-25%);
+  transition: all 1s; 
+ }
+
+ .animasi-bawah {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-100%);
+  transition: all 1s;
+ }
+
+ 
+ .animasi-atas {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100%);
+  transition: all 1s;
+ }
+ 
+ .animasi-kanan1 {
+   opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 1s; 
+ }
+
+ .animasi-kiri {
+  opacity: 0;
+ filter: blur(5px);
+ transform: translateX(-100%);
+ transition: all 1s; 
+}
+
+ 
+ .show {
+   opacity: 1;
+   filter: blur(0);
+   transform: translateX(0);
+ }
+ 
+ @media(prefers-reduce-motion) {
+   .animasi{
+     transition: none;
+   }
+ }
+
+ @keyframes muncul {
+  from {
     opacity: 0;
-    filter: blur(5px);
-    transform: translateX(25%);
-    transition: all 1s;
-   }
+    scale: 0.5;
+    
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+ }
+
+ .scroll {
+  animation: muncul linear;
+  animation-timeline:  view();
+  animation-range: entry 0% cover 40%;
+ }
+
+
+
+ @keyframes dariKiri {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  
+ }
+
+ @keyframes dariKanan {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  
+ }
+
+
+ .dari-kiri {
+  animation: dariKiri linear;
+  animation-timeline:  view();
+  animation-range: entry 0% cover 40%;
+ }
+
+ .dari-kanan {
+  animation: dariKanan linear;
+  animation-timeline:  view();
+  animation-range: entry 0% cover 40%;
+ }
   
    
    .animasi-kanan {
@@ -327,8 +454,8 @@ body {
     background-color: #FCFAEE;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
     border: none;
-    height: 600vh;
-   
+    height: 300vh;
+    
 }
 
 /* Judul */
@@ -385,12 +512,15 @@ body {
 }
 
 /* Kartu */
+  
 .card {
-    width: 770px;
+    width: 580px;
     height: 500px;
     border-radius: 20px;
     overflow: hidden;
-    margin: 7rem 7rem;
+    margin-left: 5rem;
+    margin-top: 7rem;
+    margin-right: 2rem;
     border: 3.5px solid #3f2009;
     position: relative;
     display: flex;
@@ -406,7 +536,7 @@ body {
 }
 
 .card-body {
-    width: 92%;
+    width: 90%;
     height: 85%;
     top: 0;
     right: -100%;
@@ -550,13 +680,13 @@ body {
   font-family: "Poppins", sans-serif;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(1, 1, 3, 0.5);
-  margin-top: 8rem;
+  margin-top: 7rem;
 }
 
 .layer-kedua {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 200px 200px;
+  column-gap: 500px;
 }
 
 .kotak1 {
@@ -569,16 +699,17 @@ body {
   transition: transform 0.3s ease;
   display: flex;
   margin-top: 5rem;
+  justify-content: center;
 }
 
 .kotak1 img {
   width: 180px;
   height: 180px;
+  border: 7px solid white;
+  border-radius: 15px;
 }
 
 .icon {
-  border: 10px solid white;
-  border-radius: 15px;
   margin-right: 20px;
   transition: transform 0.3s ease;
   max-height: 87%;
@@ -600,27 +731,31 @@ body {
 
 .kotak1:hover .icon {
   transform: translateY(-10px);
-  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 27px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* layer ketiga */
+.judul-gambar {
+  font-size: 35px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(1, 1, 3, 0.5);
+  margin-top: 7rem;
+}
+
 .layer-ketiga {
   position: relative;
   display: flex;
   justify-content:center ;
-  align-items: center;  
   gap: 90px;
-  margin-top: 10rem ;
-  margin-left: 3rem;
- 
+  margin-top: 4rem;
 }
 
 .gambar {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  width: 350px;
+  width: 350px;  
   max-width: 100%;
   height: 300px;
   background-color: white;
@@ -642,7 +777,7 @@ body {
 }
 
 .layer-ketiga .gambar:hover {
-  height: 400px;
+  height: 360px;
 }
 
 .layer-ketiga .gambar:hover .img-box {
@@ -664,7 +799,7 @@ body {
     position: absolute;
     top: 252px;
     width: 100%;
-    height: 35px;
+    height: 25px;
     padding: 0 30px;
     text-align: center;
     overflow: hidden;
@@ -673,7 +808,7 @@ body {
 
 .layer-ketiga .gambar:hover .isi {
     top: 130px;
-    height: 250px;
+    height: 220px;
 }
 
 .isi h2 {
@@ -685,6 +820,8 @@ body {
 .isi p {
     color: #333;
     margin-top: 10px;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 footer {
@@ -700,7 +837,7 @@ footer {
     font-size: 30px;
     font-family: Poppins;
     font-weight: bold;
-    margin-top: 800px;
+    margin-top: 200px;
   }
   
   .list li a {
@@ -757,10 +894,118 @@ footer {
   }
 
   @media only screen and (max-width: 768px) {
-    .awalan {
-        font-size: 15rem;
+    html {
+      overflow-x: hidden;
     }
+
+    .kanan {
+      display: none;
+    }
+
+    .tengah {
+      font-size: 13px;
+    }
+
+    .layer-utama {
+      height: 770vh;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    .awalan {
+      font-size: 30px;
+    }
+
+    .right-judul {
+      justify-content: center;
+      margin-top: 5rem;
+    }
+
+    .buatan {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .layer-pertama {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+
+    .right {
+      display: flex;
+    }
+
+    .card {
+      width: 400px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .card-content {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card-body {
+      width: 86%;
+    }
+
+    .accordion-content {
+      margin: 1rem;
+    }
+    
+    .layer-kedua {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .kotak1 {
+      display: flex;
+      flex-wrap: wrap;
+      width: 300px;
+    }
+
+    .content {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .icon {
+      margin-right: 0;
+    }
+
+    .kotak1:hover .icon { 
+      box-shadow: 0px 14px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .layer-ketiga {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+
+    footer {
+      margin-top: 300px;
+    }
+
+    .list {
+      margin-top: -200px;
+    }
+
+    .media {
+      margin-top: 200px;
+    }
+
+    .gambar {
+     
+    }
+
   }
+
 
 
 

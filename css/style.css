@@ -3,11 +3,43 @@ body {
   padding: 0;
   height: 3000px;
   overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #EDE8DC;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+body {
+-ms-overflow-style: none; 
+scrollbar-width: none; 
 }
 
 
 * {
   box-sizing: border-box;
+}
+
+.gradient-background {
+  background: linear-gradient(297deg,#c6fee4,#2045b1,#94f6ec);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+  z-index: -5;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
@@ -349,11 +381,33 @@ body {
 .pulau {
  display: flex;
  flex-direction: row;
- margin-top: 750px;
+ margin-top: 780px;
  justify-content: flex-end;
  position: relative;
+ background-color: #2045b1;
 }
 
+.pulau::after {
+  content: "";
+  top: -20px;
+  height: 4%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(297deg,#c6fee4,#2045b1,#94f6ec);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+.pulau::before {
+  content: "";
+  top: 500px;
+  height: 4%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(297deg,#c6fee4,#2045b1,#94f6ec);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
 
 .image-galery::before {
   content: "";
@@ -383,6 +437,11 @@ body {
   margin-top: 15%;
   margin-left: 16px;
   margin-right: 20px;
+  background-color: #FCFAEE;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .hayati,.alam,.seni {
