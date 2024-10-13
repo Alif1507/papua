@@ -813,25 +813,27 @@ footer {
   transition: 0.2s ease;
 }
 
-.media svg:first-child:hover {
+.twiter svg, .YouTube svg, .instagram svg {
+  height: 50px;
+  width: 50px;
+  fill: #D8D8D8;
+  transition: 0.2s ease;
+}
+
+.twiter svg:hover {
  fill: #000000;
  cursor: pointer;
 }
 
 
-.media svg:nth-child(2):hover {
+.YouTube svg:hover {
   fill: #FF0000;
   cursor: pointer;
 }
 
-.media svg:last-child:hover {
+.instagram svg:hover {
   fill: #E4405F;
   cursor: pointer;
-}
-
-.kiri-dikit1 {
-  transform: translateY(-100px);
-  margin-left: -100px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -907,7 +909,7 @@ footer {
 
   .tantangan {
     margin-top: 500px;
-    gap: 500px;
+    gap: 800px;
   }
 
 
@@ -915,14 +917,6 @@ footer {
     margin-top: 600px;
   }
 
-
-  .dari-kanan {
-    animation: none;
-  }
-
-  .dari-kiri {
-    animation: none;
-  }
 
   .list {
     margin-bottom: 200px;

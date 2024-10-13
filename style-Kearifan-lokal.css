@@ -870,29 +870,28 @@ footer {
     margin-left: 40px;
   }
   
-  .media svg {
+  .twiter svg, .YouTube svg, .instagram svg {
     height: 50px;
     width: 50px;
     fill: #D8D8D8;
     transition: 0.2s ease;
   }
   
-  .media svg:first-child:hover {
+  .twiter svg:hover {
    fill: #000000;
    cursor: pointer;
   }
   
   
-  .media svg:nth-child(2):hover {
+  .YouTube svg:hover {
     fill: #FF0000;
     cursor: pointer;
   }
   
-  .media svg:last-child:hover {
+  .instagram svg:hover {
     fill: #E4405F;
     cursor: pointer;
   }
-
   @media only screen and (max-width: 768px) {
     html {
       overflow-x: hidden;
@@ -902,12 +901,17 @@ footer {
       display: none;
     }
 
+    .tengah, .kiri {
+      width: 50%;
+      font-size: 2vh;
+    }
+
     .tengah {
-      font-size: 13px;
+      font-size: 12px;
     }
 
     .layer-utama {
-      height: 770vh;
+      height: 800vh;
       margin-left: 1rem;
       margin-right: 1rem;
     }

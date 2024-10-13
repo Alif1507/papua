@@ -663,25 +663,25 @@ footer {
   margin-left: 40px;
 }
 
-.media svg {
+.twiter svg, .YouTube svg, .instagram svg {
   height: 50px;
   width: 50px;
   fill: #D8D8D8;
   transition: 0.2s ease;
 }
 
-.media svg:first-child:hover {
+.twiter svg:hover {
  fill: #000000;
  cursor: pointer;
 }
 
 
-.media svg:nth-child(2):hover {
+.YouTube svg:hover {
   fill: #FF0000;
   cursor: pointer;
 }
 
-.media svg:last-child:hover {
+.instagram svg:hover {
   fill: #E4405F;
   cursor: pointer;
 }
