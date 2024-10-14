@@ -1,0 +1,681 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #3f2009;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+body {
+-ms-overflow-style: none; 
+scrollbar-width: none; 
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    scale: 0.5;
+    
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+ }
+
+ .scroll {
+  animation: muncul linear;
+  animation-timeline:  view();
+  animation-range: entry 0% cover 40%;
+ }
+
+
+
+ @keyframes dariKiri {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  
+ }
+
+ @keyframes dariKanan {
+  from {
+    transform: translateY(200px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+  
+ }
+
+
+ .dari-kiri {
+  animation: dariKiri linear;
+  animation-timeline:  view();
+  animation-range: entry 0% cover 40%;
+  padding-top: 100px;
+ }
+
+ .dari-kanan {
+  animation: dariKanan linear;
+  animation-timeline:  view();
+  animation-range: entry 0% cover 40%;
+  padding-top: 100px;
+ }
+
+.animasi {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(25%);
+  transition: all 1s;
+ }
+
+ 
+ .animasi-kanan {
+   opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-25%);
+  transition: all 1s; 
+ }
+
+ .animasi-bawah {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-100%);
+  transition: all 1s;
+ }
+
+ 
+ .animasi-atas {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100%);
+  transition: all 1s;
+ }
+ 
+ .animasi-kanan1 {
+   opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 1s; 
+ }
+
+ .animasi-kiri {
+  opacity: 0;
+ filter: blur(5px);
+ transform: translateX(-100%);
+ transition: all 1s; 
+}
+
+ 
+ .show {
+   opacity: 1;
+   filter: blur(0);
+   transform: translateX(0);
+ }
+ 
+ @media(prefers-reduce-motion) {
+   .animasi{
+     transition: none;
+   }
+ }
+
+
+
+
+.navigator {
+  display: flex;
+  height: 55px;
+  flex: 2 1 2;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 0.3s ease-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 11;  
+}
+
+.latar-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 55px;
+}
+
+.navigator:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.2);
+
+}
+
+
+
+.kiri {
+  width: 30%;
+
+}
+
+.kiri img {
+  left: 6px ;
+  position: fixed;
+  z-index: -2;
+  top: 2px;
+  width:50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.kanan, .kiri, .tengah {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+.tengah {
+  width: 40%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 18px ;
+  margin-right: 6rem;
+}
+
+.kanan {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 16px;
+  text-align: center;
+  justify-content: center;
+  gap: 2rem;
+  font-family: Poppins;
+  white-space: nowrap;
+  font-size: 13px;
+  color: white; 
+  margin-right: 6rem;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 250px;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start ;
+}
+
+.sidebar a {
+  width: 100%;
+  margin-top: 2rem;
+  text-shadow: 0 0 0.5px orange;
+  color: orange;
+}
+
+.sidebar svg {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.link:hover {
+  text-shadow: 0 0 0.5px orange;
+  color: orange;
+}
+
+.ampat,
+.ampat2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 8;
+  top: 0;
+}
+
+.Slide {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+} 
+
+.ampat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99999; 
+}
+
+
+
+.gambar {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+.tim  {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 96px;
+  gap: 2rem;
+  color: white;
+  font-family: "Sora";
+  font-weight: bold;
+}
+
+.mari {
+  margin-left: 500px;
+  position: relative;
+}
+
+.mari::after {
+  content: "";
+  width: 140px;
+  height: 140px;
+  background: #D2B48C; 
+  -moz-border-radius: 70px; 
+  -webkit-border-radius: 70px; 
+  border-radius: 70px;
+  left: -200px;
+  top: 80px;
+  position: absolute;
+}
+
+.mari::before {
+  content: "";
+  width: 140px;
+  height: 140px;
+  background:  #FAF0E6; 
+  -moz-border-radius: 70px; 
+  -webkit-border-radius: 70px; 
+  border-radius: 70px;
+  left: -380px;
+  position: absolute;
+  top: 80px;
+  display: none;
+}
+
+  
+
+.alif {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  top: 10px;
+  left: -410px;
+}
+
+.alif img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+ 
+}
+
+.pesona {
+  margin-right: 400px;
+  position: relative;
+}
+
+.pesona::before {
+  content: "";
+  width: 140px;
+  height: 140px;
+  background:  #DEB887; 
+  -moz-border-radius: 70px; 
+  -webkit-border-radius: 70px; 
+  border-radius: 70px;
+  left: 780px;
+  position: absolute;
+}
+
+.pesona::after {
+  content: "";
+  width: 140px;
+  height: 140px;
+  background:  #EDC9AF; 
+  -moz-border-radius: 70px; 
+  -webkit-border-radius: 70px; 
+  border-radius: 70px;
+  left: 980px;
+  position: absolute;
+}
+
+.hubung {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email {
+  padding-left: 100%;
+  padding-right: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border-radius: 20px;
+  border: 1px solid white;
+  font-size: 20px;
+  font-family: Poppins;
+  background-color: #3f2009;
+  color: white  ;
+  margin-left: -100%;
+  transition: 0.3s ease;
+  margin-top: 150px;
+}
+
+.atas-atas {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 3rem;
+  margin-left: 20%;
+}
+
+.nama input,.gimana input {
+  border: 1px solid white;
+  background-color: #3f2009;
+  padding: 100px 200px 100px 200px;
+  border-radius: 20px;
+  color: white;
+  text-align: left;
+}
+
+.pesan  {
+  background-color: #3f2009;
+}
+
+.paling-bawah button {
+  padding: 300px 40px 329px 200px;
+  border-radius: 20px;
+  border: 1px solid white;
+  background-color: #3f2009;
+  margin-left: 2rem;
+  margin-right: 3rem;
+  color: white;
+  padding-top: 300px;
+  padding-left: 200px;
+  text-align: left;
+  font-size: 16px;
+  position: relative;
+  transition: 0.3s ease;
+  cursor: pointer;
+  
+}
+
+.paling-bawah button:hover {
+  border: 1px #3f2009;
+  background-color: white;
+  color: #3f2009;
+
+}
+
+.paling-bawah button::after {
+  content: 'KIRIM ➤';
+  position: absolute;
+  top: 50%;
+  left:40%  ;
+}
+
+.paling-atas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gimana {
+  margin-top: 2rem;
+}
+
+.paling-tengah {
+  display: flex;
+  flex-direction: row;
+  gap:1rem;
+}
+
+.email:hover {
+  color: #3f2009;
+  border: 1px solid #3f2009;
+  background-color: white;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #3f2009;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 4rem;
+  font-size: 30px;
+  font-family: Poppins;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+.list li a {
+  text-decoration: none;
+  color: #D8D8D8;
+  margin-top: 4rem;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.list li a::after {
+  content: "";
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transition: 0.3s ease;
+}
+
+.list li a:hover:after {
+  content: "";
+  padding-left: 50%;
+  padding-right: 50%;
+  height: 2px;
+  background-color: white ;
+  position: absolute;
+  top: 40px;
+  left: 0;
+
+}
+
+.list li a:hover {
+  color: orange;
+  text-shadow: 0px 0px 1px orange;
+}
+
+.list li {
+  margin-top: 3rem;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.media {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.twiter svg, .YouTube svg, .instagram svg {
+  height: 50px;
+  width: 50px;
+  fill: #D8D8D8;
+  transition: 0.2s ease;
+}
+
+.twiter svg:hover {
+ fill: #000000;
+ cursor: pointer;
+}
+
+
+.YouTube svg:hover {
+  fill: #FF0000;
+  cursor: pointer;
+}
+
+.instagram svg:hover {
+  fill: #E4405F;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  
+
+
+
+  .kanan {
+    display: none;
+  }
+
+  .kiri svg {
+    display: block;
+  }
+  
+  .tengah, .kiri {
+    width: 50%;
+    font-size: 2vh;
+  }
+
+  .tengah {
+    font-size: 12px;
+  } 
+
+  .mari {
+    font-size: 40px;
+    margin-left: 0;
+  }
+
+  .alif {
+    left: 0;
+    top: -40px;
+    height: 80px;
+    width: 80px;
+  }
+
+  .mari::after {
+    left: 90px;
+    top: -20px;
+    height: 60px;
+    width: 60px;
+  }
+
+  .pesona {
+    font-size: 40px;
+    margin-right: 0;
+    margin-left: -70px;
+  }
+  .pesona::after {
+    left: 200px;
+    top: 60px;
+    height: 60px;
+    width: 60px;
+  }
+  .pesona::before {
+    left: 290px;
+    top: 60px;
+    height: 60px;
+    width: 60px;
+  }
+
+  .nama input {
+    padding: 50px 100px 50px 100px;
+    margin-left: -50px;
+  }
+
+  .gimana input {
+    padding: 50px 100px 50px 100px;
+    margin-left: -50px;
+  }
+
+  .pesan textarea {
+    margin-left: -50px;
+  }
+
+  .paling-bawah button {
+    padding:50px 100px 50px 100px;
+  }
+
+  .paling-bawah button::after {
+    left: 75px;
+    top: 39%;
+  }
+
+  .email {
+    padding-left: 20%;
+  padding-right: 20%;
+  margin-left: -100px;
+  }
+
+  .atas-atas {
+    flex-direction: column;
+  }
+
+
+
+}
