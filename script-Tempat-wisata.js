@@ -8,6 +8,7 @@ window.onscroll = function () {
   } else {movingDiv.style.top = stopPosition + "px"}
 }
 
+
 let slideindex = 0;
 showSlides()
 
@@ -23,6 +24,7 @@ function showSlides() {
   setTimeout(showSlides, 4000) 
 
 }
+
 
 function showSideBar () {
   

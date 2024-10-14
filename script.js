@@ -4,10 +4,11 @@ window.addEventListener('load', function() {
   setTimeout(function() {
       
       document.getElementById('loading').style.opacity = '0';
-      document.getElementById('loading').style.visibility = 'hidden';
+      document.getElementById('loading').style.visibility = 'hidden'; 
 
   }, 6000); 
 });
+
 
 
 
@@ -21,6 +22,7 @@ window.onscroll = function () {
     movingDiv.style.top = (scrollPosition + 50) + "px";
   } else {movingDiv.style.top = stopPosition + "px"}
 }
+
 
 let slideindex = 0;
 showSlides()

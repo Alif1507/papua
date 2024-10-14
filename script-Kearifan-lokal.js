@@ -17,6 +17,8 @@ accordionContent.forEach((item, index) => {
     })
 })
 
+
+
 function removeOpen(index1){
     accordionContent.forEach((item2, index2) => {
         if(index1 != index2){

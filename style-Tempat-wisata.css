@@ -4,6 +4,7 @@ body {
   height: 3000px;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background-color: #EDE8DC;
 }
 
 @keyframes daribawah {
@@ -859,6 +860,7 @@ body {
   filter: drop-shadow(0 0 50px #000);
 }
 
+
 .border-text h4 {
   color: #ffffff;
   font-family: "Poppins", serif;
@@ -1296,6 +1298,19 @@ body {
   margin-left: 40px;
 }
 
+.border-text h4,
+  .border-text2 h4,
+  .border-text3 h4,
+  .border-text4 h4,
+  .border-text5 h4,
+  .border-text6 h4,
+  .border-text7 h4,
+  .border-text8 h4,
+  .border-text9 h4,
+  .border-box10 h4 {
+    font-size: 14px;
+  }
+
 @media (max-width: 992px) {
   .border-text h4,
   .border-text2 h4,
@@ -1506,9 +1521,19 @@ body {
     color: #ffffff;
     font-family: "Poppins", serif;
     margin-right: 30px;
-    font-size: 15px;
+    font-size: 13px;
   }
 }
+
+.Bb {
+  font-family: "Poppins", serif;
+  text-align: center;
+  margin-top: 50vh;
+  font-size: 50px;
+  text-shadow: 0 0 5px #000;
+}
+
+
 footer {
   background-color: #3f2009;
   width: 100%;
@@ -1529,6 +1554,29 @@ footer {
   color: #D8D8D8;
   margin-top: 4rem;
   transition: 0.3s ease;
+  position: relative;
+}
+
+.list li a::after {
+  content: "";
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transition: 0.3s ease;
+}
+
+.list li a:hover:after {
+  content: "";
+  padding-left: 50%;
+  padding-right: 50%;
+  height: 2px;
+  background-color: white ;
+  position: absolute;
+  top: 40px;
+  left: 0;
+
 }
 
 .list li a:hover {

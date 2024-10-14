@@ -5,6 +5,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   background-color: #EDE8DC;
+  
 }
 
 
@@ -51,7 +52,7 @@ scrollbar-width: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  z-index: 99999999999999999999;
   background-color: var(--base-color);
   transition: opacity 1s ease, visibility 1s ease;
 }
@@ -243,6 +244,7 @@ scrollbar-width: none;
   transition: 0.2s;
 }
 
+
 .link:hover {
   text-shadow: 0 0 0.5px orange;
   color: orange;
@@ -369,7 +371,6 @@ scrollbar-width: none;
 
 .image-galery {
   position: relative;
-  margin-top: 1%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -381,33 +382,13 @@ scrollbar-width: none;
 .pulau {
  display: flex;
  flex-direction: row;
- margin-top: 780px;
+ margin-top: 770px;
  justify-content: flex-end;
  position: relative;
  background-color: #2045b1;
 }
 
-.pulau::after {
-  content: "";
-  top: -20px;
-  height: 4%;
-  width: 100%;
-  position: absolute;
-  background: linear-gradient(297deg,#c6fee4,#2045b1,#94f6ec);
-  background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
-}
 
-.pulau::before {
-  content: "";
-  top: 500px;
-  height: 4%;
-  width: 100%;
-  position: absolute;
-  background: linear-gradient(297deg,#c6fee4,#2045b1,#94f6ec);
-  background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
-}
 
 .image-galery::before {
   content: "";
@@ -435,11 +416,11 @@ scrollbar-width: none;
   justify-content: center;
   align-items: center;
   margin-top: 15%;
-  margin-left: 16px;
+  margin-left: 20px;
   margin-right: 20px;
   background-color: #FCFAEE;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  border-radius: 15px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -481,9 +462,9 @@ border: solid 5px #3f2009;
 
 
 .hayati:hover,.alam:hover,.seni:hover {
-  background-color: #3f2009; 
+  background-color: #D2B48C; 
   border: 5px solid rgba(255, 165, 0, 0);
-  box-shadow: 0 4px 100px #3f2009; 
+  box-shadow: 0 4px 100px #D2B48C; 
   color: white;
   transform: translateY(-30px);
 }
@@ -665,6 +646,7 @@ border: solid 5px #3f2009;
   width: 100%;
   margin-top: 18%;
   position: relative;
+  z-index: -999;
 }
 
 .social {
@@ -767,7 +749,7 @@ border: solid 5px #3f2009;
 
 footer {
   background-color: #3f2009;
-  width: 100%;
+  width: 100% 100% 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -777,7 +759,7 @@ footer {
   font-size: 30px;
   font-family: Poppins;
   font-weight: bold;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .list li a {
@@ -785,6 +767,31 @@ footer {
   color: #D8D8D8;
   margin-top: 4rem;
   transition: 0.3s ease;
+  position: relative;
+}
+
+.list li a::after {
+  content: "";
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transition: 0.3s ease;
+}
+
+
+.list li a:hover:after {
+  content: "";
+  padding-left: 50%;
+  padding-right: 50%;
+  height: 2px;
+  background-color: white ;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  
+
 }
 
 .list li a:hover {
@@ -815,7 +822,9 @@ footer {
   width: 50px;
   fill: #D8D8D8;
   transition: 0.2s ease;
+  position: relative;
 }
+
 
 .twiter svg:hover {
  fill: #000000;

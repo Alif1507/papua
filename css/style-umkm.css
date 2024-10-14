@@ -3,6 +3,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   overflow-y: scroll;
+  background-color: #EDE8DC;
 }
 
 ::-webkit-scrollbar {
@@ -395,6 +396,10 @@ scrollbar-width: none;
   margin-right: 7rem;
   flex-wrap: nowrap;
   gap: 2.9rem;
+  background-color:#FCFAEE;
+  padding: 5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 2px black;
 }
 
 
@@ -544,7 +549,8 @@ scrollbar-width: none;
   width: 100%;
   height: 150px;
   transition: transform 0.3s ease-out, opacity 0.3s ease-in;
-  background-color:white;
+  background-color: #FCFAEE;
+  box-shadow: 0 0 2px black;
   z-index: 2;
   position: relative;
   display: flex;
@@ -553,8 +559,8 @@ scrollbar-width: none;
   justify-content: center;
   margin-top: 10rem;
   width: 90%;
-  padding-bottom: 200px;
-  padding-top: 80px;
+  padding-bottom: 300px;
+  padding-top: 110px;
 }
 
 
@@ -701,6 +707,7 @@ scrollbar-width: none;
  margin-left: 1rem;
  text-align: start;
  position: relative;
+ background-color: #FCFAEE;
 }
 
 .kanan-box p {
@@ -774,6 +781,7 @@ footer {
   font-size: 30px;
   font-family: Poppins;
   font-weight: bold;
+  margin-top: 10rem;
 }
 
 .list li a {
@@ -781,11 +789,34 @@ footer {
   color: #D8D8D8;
   margin-top: 4rem;
   transition: 0.3s ease;
+  position: relative;
 }
 
 .list li a:hover {
   color: orange;
   text-shadow: 0px 0px 1px orange;
+}
+
+.list li a::after {
+  content: "";
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transition: 0.3s ease;
+}
+
+.list li a:hover:after {
+  content: "";
+  padding-left: 50%;
+  padding-right: 50%;
+  height: 2px;
+  background-color: white ;
+  position: absolute;
+  top: 40px;
+  left: 0;
+
 }
 
 .list li {
@@ -875,9 +906,13 @@ footer {
     width: 150%;
     margin-left: -40px;
   }
+  
+  
 
   .parawisata {
     margin-top: 400px;
+    padding-top: 400px;
+    padding-bottom: 510px;
   }
 
 
@@ -897,7 +932,10 @@ footer {
   .banyak {
    flex-direction: column;
     gap: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
+
 
   .kerajinan,.perikanan,.pertanian {
     width: 320px;
