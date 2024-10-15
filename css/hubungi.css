@@ -311,7 +311,6 @@ scrollbar-width: none;
   align-items: center;
   flex-direction: column;
   font-size: 96px;
-  gap: 2rem;
   color: white;
   font-family: "Sora";
   font-weight: bold;
@@ -333,6 +332,22 @@ scrollbar-width: none;
   left: -200px;
   top: 80px;
   position: absolute;
+  display: none;
+
+}
+
+.ganantha {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  top: 10px;
+  left: -220px;
+}
+
+.ganantha img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .mari::before {
@@ -375,23 +390,39 @@ scrollbar-width: none;
   content: "";
   width: 140px;
   height: 140px;
-  background:  #DEB887; 
   -moz-border-radius: 70px; 
   -webkit-border-radius: 70px; 
   border-radius: 70px;
   left: 780px;
   position: absolute;
+  display: none;
+}
+
+.tegar {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  top: 10px;
+  left: 710px;
+}
+
+.tegar img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+ 
 }
 
 .pesona::after {
   content: "";
-  width: 140px;
-  height: 140px;
-  background:  #EDC9AF; 
+  width: 180px;
+  height: 180px;
+  background:  #DEB887; 
   -moz-border-radius: 70px; 
   -webkit-border-radius: 70px; 
-  border-radius: 70px;
-  left: 980px;
+  border-radius: 50%;
+  left: 960px;
+  top: 55px;
   position: absolute;
 }
 
